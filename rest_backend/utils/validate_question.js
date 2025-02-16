@@ -1,20 +1,21 @@
+const { ERROR_MESSAGES, VALIDATION_RULES } = require("../constants/rest_constants");
+
 function validateQuestion(question) {
-    const { text, options, correctAnswer } = question;
-  
-    if (!text || typeof text !== "string" || text.trim() === "") {
-      return { valid: false, error: "Question text is required and must be a string." };
-    }
-  
-    if (!Array.isArray(options) || options.length < 4 || options.some(opt => typeof opt !== "string")) {
-      return { valid: false, error: "Options must be an array of 4 items." };
-    }
-  
-    if (typeof correctAnswer !== "number" || correctAnswer < 0 || correctAnswer >= options.length) {
-      return { valid: false, error: "Correct answer must be a valid index of the options array." };
-    }
-  
-    return { valid: true };
+  const { text, options, correctAnswer } = question;
+
+  if (!text || typeof text !== VALIDATION_RULES.TEXT_TYPE || text.trim() === "") {
+    return { valid: false, error: ERROR_MESSAGES.INVALID_TEXT };
   }
-  
-  module.exports = validateQuestion;
-  
+
+  if (!Array.isArray(options) || options.length < VALIDATION_RULES.MIN_OPTIONS || options.some(opt => typeof opt !== VALIDATION_RULES.TEXT_TYPE)) {
+    return { valid: false, error: ERROR_MESSAGES.INVALID_OPTIONS };
+  }
+
+  if (typeof correctAnswer !== VALIDATION_RULES.ANSWER_TYPE || correctAnswer < 0 || correctAnswer >= options.length) {
+    return { valid: false, error: ERROR_MESSAGES.INVALID_ANSWER };
+  }
+
+  return { valid: true };
+}
+
+module.exports = validateQuestion;

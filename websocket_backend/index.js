@@ -25,9 +25,7 @@ wss.on("connection", (ws, req) => {
     console.log(`Player ${ws.user.id} connected`)
     ws.on("message", (message) => {
         try {
-            // console.log("Message received from player : ", message);
             const parsedMessage = JSON.parse(message);
-            // console.log(parsedMessage.token);
             if (!parsedMessage.token) {
                 console.log("❌ Message rejected: No token provided.");
                 return;

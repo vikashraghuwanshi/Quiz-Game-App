@@ -1,0 +1,11 @@
+# JoinGame -
+
+{ "action": "joinGame", "playerId": "67b1cea237a8542e51d604f5", token: "" }
+{ "action": "joinGame", "playerId": "67b1cea837a8542e51d604f8", token: ""}
+
+
+# Submit Answers - 
+
+
+{ "action": "answer:submit", "gameId": "game_1739638537035", "playerId": "67b1cea237a8542e51d604f5", "answerIndex": 1, token: "" }
+{ "action": "answer:submit", "gameId": "game_1739638537035", "playerId": "67b1cea837a8542e51d604f8", "answerIndex": 3, token: "" }
