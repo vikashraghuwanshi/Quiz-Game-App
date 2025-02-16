@@ -26,7 +26,7 @@ async function matchPlayers(playerId, ws) {
     }
 
     try {
-      const response = await axios.post(`${process.env.REST_SERVER_HOST}:${process.env.API_PORT}/game/start`, {
+      const response = await axios.post(`${process.env.REST_SERVER_HOST}/game/start`, {
         player1: player1Id,
         player2: player2Id,
       });
