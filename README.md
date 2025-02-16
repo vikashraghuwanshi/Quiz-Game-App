@@ -55,3 +55,11 @@ Then Run the REST API collections for registering, login user, adding questions 
 
 For Websocket APIs
 use postman_websocket_messages.txt for message format
+
+
+# Rest Server Render link
+https://quiz-game-app-thxm.onrender.com
+
+
+# Websocket Server Render link
+https://quiz-websocket.onrender.com
