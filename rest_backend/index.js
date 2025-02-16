@@ -1,27 +1,13 @@
-// rest server
-
-const express = require("express");
-const dotenv = require("dotenv");
 const http = require("http");
-const cors = require('cors');
+const app = require("./app");
 
-// import mongodb
-const connectMongoDB = require("./db.js")
+// set API port from environment or use default 9000
+const API_PORT = process.env.API_PORT || 9000;
 
-dotenv.config();
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-// MongoDB Connection
-connectMongoDB();
-
-// Create an HTTP server
+// create an HTTP server
 const server = http.createServer(app);
 
-// Run API Server
-const API_PORT = process.env.API_PORT | 9000;
+// start the server
 server.listen(API_PORT, () => {
   console.log(`🚀 API Server running on port ${API_PORT}`);
 });
