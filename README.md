@@ -63,3 +63,9 @@ https://quiz-game-app-thxm.onrender.com
 
 # Websocket Server Render link
 https://quiz-websocket.onrender.com
+
+
+# Basic frontend for testing 
+https://quiz-game-2xg7.onrender.com
+
+Open two different browser window and login both players and then join game
