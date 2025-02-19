@@ -9,13 +9,14 @@ function handleMessage(ws, message) {
   }
 
   const data = JSON.parse(message);
-
+  console.log(`📥 Player ${ws.user.id} sent a message`);
   if (data.action === "joinGame") {
     console.log(`📥 Player ${ws.user.id} wants to join a game`);
     matchPlayers(ws.user.id, ws);
   }
 
   if (data.action === "answer:submit") {
+    console.log(`📥 Player ${ws.user.id} submitted an answer`);
     handleAnswerSubmission(data, ws.user.id);
   }
 }
