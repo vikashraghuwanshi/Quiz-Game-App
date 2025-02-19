@@ -1,2 +1,5 @@
+frontend/node_modules/
 rest_backend/node_modules/
+graphql_backend/node_modules/
 websocket_backend/node_modules/
+.DS_Store
