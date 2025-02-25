@@ -3,7 +3,7 @@ let socket = null;
 export const initializeWebSocket = (token, onMessage) => {
   if (!token) return;
 
-  socket = new WebSocket(`ws://quiz-websocket.onrender.com?token=${token}`);
+  socket = new WebSocket(`https://quiz-websocket.onrender.com?token=${token}`);
 
   socket.onopen = () => console.log("✅ WebSocket connected");
   socket.onmessage = (event) => {
