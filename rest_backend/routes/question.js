@@ -8,7 +8,8 @@ const router = express.Router();
 // get a question by id
 router.get("/:id", async (req, res) => {
   try {
-    const question = await Question.findById(req.params.id);
+    const question = await Question.findById(req.params.id)
+                                  .select("_id text options correctAnswer");
 
     if (!question) {
       return res.status(404).json({ message: "Question not found" });
@@ -24,7 +25,7 @@ router.get("/:id", async (req, res) => {
 // get all questions
 router.get('/', async (req, res) => {
   try {
-    const questions = await Question.find();
+    const questions = await Question.find().select("_id text options correctAnswer");
     res.json(questions);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -44,7 +45,7 @@ router.post('/', async (req, res) => {
     // create and save question
     const question = new Question(req.body);
     await question.save();
-    res.status(201).json(question);
+    res.status(201).json({ message: "Question added successfully" });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
