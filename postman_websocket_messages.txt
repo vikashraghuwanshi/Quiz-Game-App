@@ -1,3 +1,6 @@
+# Connecting to websocket
+ws://localhost:4000?token=eyJhbGciOiJIUnsI1NindesdCI6IkpXVCJ9.eyJpjIyijkiCSjObHdzpRfPTZjAwNDQ1ZWVkMjE0YzlkZIjoicGxheWVyMSIsImlhdCI6MTc0MDM5MNjQ2fQ.ryhdsijemjwEv6xXyAmejmsdnjb9TZhd7Jzo
+
 # JoinGame -
 
 { "action": "joinGame" }

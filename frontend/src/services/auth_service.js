@@ -1,6 +1,6 @@
 // auth_service.js
 const SERVER_TYPE = "rest"; // change this to "rest" if needed
-const BASE_URL = "http://192.168.1.3:9000";
+const BASE_URL = "https://quiz-game-app-thxm.onrender.com";
 
 export const loginUser = async (username, password) => {
   return SERVER_TYPE === "rest"
