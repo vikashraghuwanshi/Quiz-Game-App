@@ -1,3 +1,16 @@
+## 📝 PR Title Guidelines  
+Please format your PR title using the following pattern:  
+
+`[JIRA_TICKET1 | JIRA_TICKET2] - [TYPE] : Short Description`  
+
+### Allowed Types:
+- `feat` → For new features  
+- `fix` → For fixing bugs  
+- `refactor` → For code refactoring  
+- `doc` → For documentation updates  
+
+🔴 **PRs without a proper title format may be rejected!**
+
 ## 📝 Description
 <!-- Provide a summary of your changes and the problem it solves. -->
 
