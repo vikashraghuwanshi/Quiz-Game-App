@@ -1,5 +1,5 @@
 // auth_service.js
-const SERVER_TYPE = "rest"; // change this to "rest" if needed
+const SERVER_TYPE = "graphql"; // change this to "rest" if needed
 const BASE_URL = "https://quiz-game-app-thxm.onrender.com";
 
 export const loginUser = async (username, password) => {
