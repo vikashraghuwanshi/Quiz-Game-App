@@ -1,0 +1,23 @@
+name: 🚨 Enforce Branch Naming Convention
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  check-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔍 Validate Branch Name
+        run: |
+          branch_name="${GITHUB_REF#refs/heads/}"
+          echo "Branch name: $branch_name"
+
+          if [[ ! "$branch_name" =~ ^(feature|bug|task|release)/ILTE-[0-9]+/.+ ]]; then
+            echo "❌ Invalid branch name: $branch_name"
+            echo "✅ Expected format: (feature|bug|task|release)/ILTE-12345/description"
+            exit 1
+          else
+            echo "✅ Branch name is valid."
+          fi
