@@ -7,6 +7,7 @@ function gameInitializationPayload(gameId, player1Id, player2Id) {
     };
 }
 
+// payload for questions
 function questionsSendPayload(gameId, question) {
     const { answer, ...questionWithoutAnswer } = question;
     return {
